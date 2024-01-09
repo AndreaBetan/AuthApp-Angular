@@ -2,20 +2,24 @@ import { Component, computed, inject } from '@angular/core';
 import { AuthService } from '../../../auth/services/auth.service';
 import { CommonModule } from '@angular/common';
 
+
+
 @Component({
-  standalone: true,
-  imports: [ CommonModule],
   templateUrl: './dashboard-layout.component.html',
-  styleUrl: './dashboard-layout.component.css'
+  styles: ``
 })
 export class DashboardLayoutComponent {
 
-  private authService = inject( AuthService )
+  private authService = inject( AuthService );
 
-  public user = computed( () => this.authService.currentUser() )
+  public user = computed(() => this.authService.currentUser() );
 
-  onLogout(){
-    this.authService.logout()
+  // get user() {
+  //   return this.authService.currentUser();
+  // }
+
+  onLogout() {
+    this.authService.logout();
   }
 
 }

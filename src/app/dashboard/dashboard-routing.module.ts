@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardLayoutComponent,
-    children: []
+    // children: []
   }
 ];
 
